@@ -10,3 +10,41 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Ink bleed animation with jitter */
+@keyframes inkBleed {
+  0% {
+    transform: scale(1.05) translate(0, 0);
+    filter: contrast(1.1) brightness(0.95) blur(0.5px);
+  }
+  15% {
+    transform: scale(1.02) translate(-0.5px, 0.5px);
+    filter: contrast(1.15) brightness(0.93) blur(0.3px);
+  }
+  30% {
+    transform: scale(1.01) translate(0.5px, -0.3px);
+    filter: contrast(1.12) brightness(0.94) blur(0.2px);
+  }
+  45% {
+    transform: scale(1.005) translate(-0.3px, 0.4px);
+    filter: contrast(1.1) brightness(0.95) blur(0.1px);
+  }
+  60% {
+    transform: scale(1.002) translate(0.2px, -0.2px);
+    filter: contrast(1.08) brightness(0.96) blur(0.05px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    filter: contrast(1.1) brightness(0.95) blur(0);
+  }
+}
+
+/* Blinking cursor for label-maker effect */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
