@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Txt() {
   return (
     <div className="min-h-screen bg-white">
@@ -8,9 +10,16 @@ function Txt() {
             <h1 className="text-[2.75rem] font-serif text-gray-900 mb-4">
               .txt
             </h1>
+            <Link to="/txt/jan2026">
             <p className="text-gray-600">
-              coming soon
+              january
             </p>
+            </Link>
+            <Link to="/txt/dec2025">
+            <p className="text-gray-600">
+              december
+            </p>
+            </Link>
           </header>
         </div>
       </div>

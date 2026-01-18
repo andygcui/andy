@@ -8,7 +8,7 @@ function Edu() {
               .edu
             </h1>
             <p className="text-gray-600">
-              i am a financial engineering student @ princeton who enjoys studying algorithms, statistics & probability; web & app development; and doing transformer-based AI research.
+              i am a financial engineering student @ princeton who enjoys studying algorithms, statistics & probability; web / app development; and doing transformer-based AI research.
             </p>
 
             <div className="flex justify-center" style={{ marginTop: '-50px' }}>
