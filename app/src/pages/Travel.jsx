@@ -15,7 +15,7 @@ function Travel() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <header className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-[2.75rem] font-serif text-gray-900 mb-4">
               travel
             </h1>
             <p className="text-gray-600">

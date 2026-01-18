@@ -2,14 +2,14 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { portfolioImages as staticImages } from '../data/portfolioImages'
 import { FaGithub, FaTiktok, FaYoutube, FaSpotify, FaEnvelope, FaInstagram } from 'react-icons/fa'
+import { useIntro } from '../contexts/IntroContext'
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false)
   const [images, setImages] = useState([])
   const [draggedIndex, setDraggedIndex] = useState(null)
   const [dragOverIndex, setDragOverIndex] = useState(null)
-  const [showIntro, setShowIntro] = useState(true)
-  const [paperSliding, setPaperSliding] = useState(false)
+  const { showIntro, setShowIntro, paperSliding, setPaperSliding } = useIntro()
   const [tigerVisible, setTigerVisible] = useState(false)
   const [captionText, setCaptionText] = useState('')
   const [captionComplete, setCaptionComplete] = useState(false)
@@ -202,7 +202,7 @@ function Home() {
           <div 
             className="relative flex flex-col items-center justify-center"
             style={{
-              transform: paperSliding ? 'translateY(-40px) scale(0.9)' : 'translateY(0) scale(1)',
+              transform: paperSliding ? 'scale(0.9)' : 'scale(1)',
               opacity: paperSliding ? 0 : 1,
               transition: paperSliding ? 'transform 0.6s ease-out, opacity 0.6s ease-out' : 'none'
             }}
@@ -261,17 +261,17 @@ function Home() {
         <div className="max-w-4xl mx-auto">
           <header className="text-center">
             <Link to="/edu">
-              <h1 className="text-5xl font-bold text-gray-900 mb-6 hover:text-gray-700 transition-colors cursor-pointer">
-                andy cui
+              <h1 className="text-[2.75rem] font-serif text-gray-1000 mt-40 mb-4 hover:text-gray-700 transition-colors cursor-pointer">
+                ANDY CUI
               </h1>
             </Link>
             {/* Social Links */}
-            <div className="flex justify-center items-center gap-6">
+            <div className="flex justify-center items-center gap-6 mb-8">
               <a
                 href="https://github.com/andygcui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-gray-900 transition-colors"
+                className="text-gray-1000 hover:text-gray-800 transition-colors"
                 aria-label="GitHub"
               >
                 <FaGithub size={24} />
@@ -280,7 +280,7 @@ function Home() {
                 href="https://www.tiktok.com/@andy_cui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-gray-900 transition-colors"
+                className="text-gray-1000 hover:text-gray-800 transition-colors"
                 aria-label="TikTok"
               >
                 <FaTiktok size={24} />
@@ -289,7 +289,7 @@ function Home() {
                 href="https://www.youtube.com/@andycui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-gray-900 transition-colors"
+                className="text-gray-1000 hover:text-gray-800 transition-colors"
                 aria-label="YouTube"
               >
                 <FaYoutube size={24} />
@@ -298,7 +298,7 @@ function Home() {
                 href="https://open.spotify.com/user/fgdbobbt7vmocnt73ukp0fqcr?si=5116222092fa473d"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-gray-900 transition-colors"
+                className="text-gray-1000 hover:text-gray-800 transition-colors"
                 aria-label="Spotify"
               >
                 <FaSpotify size={24} />
@@ -307,7 +307,7 @@ function Home() {
                 href="https://www.instagram.com/_andycui"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-gray-900 transition-colors"
+                className="text-gray-1000 hover:text-gray-800 transition-colors"
                 aria-label="Instagram"
               >
                 <FaInstagram size={24} />
@@ -319,20 +319,36 @@ function Home() {
 
       {!showIntro && (
         <>
-          <Link to="/edu">
-            <div className="flex justify-center" style={{ marginTop: '5px', marginBottom: '60px' }}>
-              <img 
-                src="/uploads/tiger.png" 
-                alt="princeton tiger" 
-                className="max-w-xs scale-80 transition-all duration-200"
-                style={{ transform: 'scale(0.8)' }}
-                onMouseEnter={(e) => e.target.style.filter = 'brightness(1.5)'}
-                onMouseLeave={(e) => e.target.style.filter = 'brightness(1)'}
-              />
-            </div>
-          </Link>
+          {/* Category Circles */}
+          {/* To add images: Replace the inner div with: <img src="/path/to/image.jpg" alt="edu" className="w-full h-full object-cover" /> */}
+          <div className="flex justify-center items-center gap-8 mb-12">
+            <Link to="/edu" className="group">
+              <div className="w-24 h-24 rounded-full bg-gray-200 overflow-hidden transition-all duration-200 hover:scale-110 cursor-pointer">
+                {/* Placeholder for edu image - replace with img tag when ready */}
+                <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
+                  edu
+                </div>
+              </div>
+            </Link>
+            <Link to="/travel" className="group">
+              <div className="w-24 h-24 rounded-full bg-gray-200 overflow-hidden transition-all duration-200 hover:scale-110 cursor-pointer">
+                {/* Placeholder for travel image - replace with img tag when ready */}
+                <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
+                  travel
+                </div>
+              </div>
+            </Link>
+            <Link to="/" className="group">
+              <div className="w-24 h-24 rounded-full bg-gray-200 overflow-hidden transition-all duration-200 hover:scale-110 cursor-pointer">
+                {/* Placeholder for misc image - replace with img tag when ready */}
+                <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
+                  misc
+                </div>
+              </div>
+            </Link>
+          </div>
 
-          <p className="text-center text-gray-600" style={{ marginTop: '100px' }}> my favorite memories </p>
+          <p className="text-center font-mono text-sm text-gray-600" style={{ marginTop: '40px' }}> a few of my favorite memories </p>
         </>
       )}
       {/* Portfolio Grid Section */}

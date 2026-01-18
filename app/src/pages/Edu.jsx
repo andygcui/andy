@@ -4,11 +4,11 @@ function Edu() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <header className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-[2.75rem] font-serif text-gray-900 mb-4">
               .edu
             </h1>
             <p className="text-gray-600">
-              i am a financial engineering student at princeton who enjoys studying algorithms, statistics & probability; web & app development; and doing transformer-based AI research.
+              i am a financial engineering student @ princeton who enjoys studying algorithms, statistics & probability; web & app development; and doing transformer-based AI research.
             </p>
 
             <div className="flex justify-center" style={{ marginTop: '-50px' }}>
@@ -18,7 +18,7 @@ function Edu() {
                  style={{ transform: 'scale(0.4)' }}></img>
             </div>
 
-            <p className="text-gray-600 text-center" style={{ marginTop: '40px' }}>projects here!</p>
+            <p className="text-gray-600 text-center" style={{ marginTop: '40px' }}>[projects here]</p>
           
           </header>
         </div>
