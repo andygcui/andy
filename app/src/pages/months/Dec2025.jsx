@@ -22,15 +22,15 @@ function Dec2025() {
               december 2025
             </h1>
             <p className="text-gray-600 mb-2 italic">
-              getting fat, formals, smoke break, finals lock, winter
+              formals, smoke break, finals lock, getting fat, winter
             </p>
             <p className="text-gray-600 mb-2">
               <br />
-              princeton, new jersey <br />
-              new york, new york <br />
-              north potomac, maryland <br />
-              columbia, maryland <br />
-              panama city, panama
+              princeton, nj <br />
+              new york, ny <br />
+              north potomac, md <br />
+              columbia, md <br />
+              panama city, pa
             </p>
           </header>
 
@@ -44,16 +44,29 @@ function Dec2025() {
 
           <div className="flex justify-center">
             <p className="text-gray-600">
-              you got time and i got money, smerz <br />
               myth, beach house <br />
-              hell of a night, travis scott
+              hell of a night, travis scott <br />
+              you got time and i got money, smerz
             </p>
           </div>
         </div>
       </div>
+      <div className="opacity-0"> 
+          <iframe 
+            width="1" 
+            height="1" 
+            src="https://www.youtube.com/embed/LzEzE3cpuvg?start=4&autoplay=1" 
+            title="is it a crime to be unsure" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen>
+          </iframe>
+          </div>
     </div>
   )
 }
 
 // @ts-ignore
 export default Dec2025
+
+

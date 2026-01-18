@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useIntro } from '../contexts/IntroContext'
-import { FaGithub, FaTiktok, FaYoutube, FaSpotify, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaTiktok, FaYoutube, FaSpotify, FaInstagram, FaRegEnvelope } from 'react-icons/fa'
 
 function Nav() {
   const location = useLocation()
@@ -112,6 +112,15 @@ function Nav() {
             aria-label="Spotify"
           >
             <FaSpotify size={18} />
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=andy.cui@princeton.edu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+            aria-label="Gmail"
+          >
+            <FaRegEnvelope size={18} />
           </a>
         </div>
       </div>

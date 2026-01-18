@@ -7,20 +7,64 @@ function Edu() {
             <h1 className="text-[2rem] font-serif text-gray-900 mb-4">
               .edu
             </h1>
-            <p className="text-gray-600">
-              i am a financial engineering student @ princeton who enjoys studying algorithms, statistics & probability; web / app development; and transformer-based AI research.
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              i am a financial engineering student @ princeton who enjoys studying algorithms, statistics & probability; web / game development; and transformer-based AI research.
             </p>
 
-            <div className="flex justify-center" style={{ marginTop: '-50px' }}>
+            <div className="flex justify-center" style={{ marginTop: '-50px', marginBottom: '-150px' }}>
                  <img src="/uploads/me.png" 
                  alt="me"
                  className="max-w-xs scale-40" 
                  style={{ transform: 'scale(0.4)' }}></img>
             </div>
-
-            <p className="text-gray-600 text-center" style={{ marginTop: '40px' }}>[projects here]</p>
-          
           </header>
+          <div className="mt-8">
+            <h2 className="text-xl font-serif text-gray-900 mb-6 border-b border-gray-300 pb-2">experience & projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-20">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Miyagi Labs (YC W25)</h3>
+                <p className="text-sm text-gray-700">Full-stack developer building automated course generation pipelines, dashboards, and React features.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Special Triangles in 3-Colorings of Complete Graphs: Rainbow and Monochromatic Ramsey theory</h3>
+                <p className="text-sm text-gray-600 mb-2"> "Given any 3-edge-coloring of the complete graph 𝐾<sub>𝑛</sub> , what is the smallest 𝑛 such that there must exist at least two special triangles?"</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Applying Civil Information Modeling and Augmented Reality to the Construction of Underground Pipelines</h3>
+                <p className="text-sm text-gray-700">AR display of underground pipeline structures to assist and increase safety for construction engineers.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">March Madness Bracket Predictor</h3>
+                <p className="text-sm text-gray-700">Multivariate linear regression model optimized for log loss using historical performance data</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">GreenTrip</h3>
+                <p className="text-sm text-gray-700">Full-stack sustainable AI travel agent optimizing for CO₂ emissions, cost, and sustainability</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">3D Tennis Swing Tracker</h3>
+                <p className="text-sm text-gray-700">MediaPipe pose detection to analyze tennis swing mechanics, create 3d swingpath models, and compare with pro baselines</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Pomoplant</h3>
+                <p className="text-sm text-gray-700">Gamified productivity app for mac with custom state-machine system, hand-drawn animations, and progression tracking</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Recycle Princeton</h3>
+                <p className="text-sm text-gray-700">Tetris-style recycling game for educating children aged 5-8 about plastic waste sorting based on local regulations</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">EmojiWorld</h3>
+                <p className="text-sm text-gray-700">Original 2D Pixel RPG with hand-animated sprites, collision detection, and multi-world transitions</p>
+              </div>
+             
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Princeton Game Theory Club</h3>
+                <p className="text-sm text-gray-700">Official club website</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
