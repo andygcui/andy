@@ -353,7 +353,7 @@ function Home() {
               <div className="w-24 h-24 rounded-full bg-gray-200 overflow-hidden transition-all duration-200 hover:scale-110 cursor-pointer">
                 {/* Placeholder for etc image - replace with img tag when ready */}
                 <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
-                  .etc
+                  etc.
                 </div>
               </div>
             </Link>

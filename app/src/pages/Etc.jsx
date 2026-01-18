@@ -16,7 +16,7 @@ function Etc() {
           {/* Header */}
           <header className="text-center mb-16">
             <h1 className="text-[2.75rem] font-serif text-gray-900 mb-4">
-              .etc
+              etc.
             </h1>
             <p className="text-gray-600">
               favorite cities: cusco, peru // lucerne, switzerland // new york, usa // chengdu, china // paris, france // kyoto, japan // providenciales, turks and caicos 
