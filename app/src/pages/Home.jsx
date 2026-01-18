@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { portfolioImages as staticImages } from '../data/portfolioImages'
+import { FaGithub, FaTiktok, FaYoutube, FaSpotify, FaEnvelope, FaInstagram } from 'react-icons/fa'
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false)
@@ -115,9 +116,64 @@ function Home() {
             <h1 className="text-5xl font-bold text-gray-900 mb-4">
               andy cui
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-6">
               student; 
             </p>
+            {/* Social Links */}
+            <div className="flex justify-center items-center gap-6">
+              <a
+                href="https://github.com/andygcui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="GitHub"
+              >
+                <FaGithub size={24} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@andy_cui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok size={24} />
+              </a>
+              <a
+                href="https://www.youtube.com/@andycui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="YouTube"
+              >
+                <FaYoutube size={24} />
+              </a>
+              <a
+                href="https://open.spotify.com/user/fgdbobbt7vmocnt73ukp0fqcr?si=5116222092fa473d"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="Spotify"
+              >
+                <FaSpotify size={24} />
+              </a>
+              <a
+                href="https://www.instagram.com/_andycui"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={24} />
+              </a>
+              <a
+                href="mailto:andy.cui@princeton.edu"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="Email"
+              >
+                <FaEnvelope size={24} />
+              </a>
+            </div>
           </header>
         </div>
       </div>
