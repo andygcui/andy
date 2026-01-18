@@ -12,6 +12,20 @@ function Home() {
   const [headingComplete, setHeadingComplete] = useState(false)
   const audioRef = useRef(null)
 
+  // Preload images for smooth transitions
+  useEffect(() => {
+    const preloadImages = [
+      '/uploads/me.png', // Edu page image
+      '/uploads/tiger.png', // Stamp animation
+      '/uploads/header.png' // Header icon
+    ]
+    
+    preloadImages.forEach(src => {
+      const img = new Image()
+      img.src = src
+    })
+  }, [])
+
   // Stamp impression animation sequence
   useEffect(() => {
     if (!showIntro) return
