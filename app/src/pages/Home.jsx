@@ -113,7 +113,7 @@ function Home() {
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-16">
+          <header className="text-center">
             <Link to="/about">
               <h1 className="text-5xl font-bold text-gray-900 mb-6 hover:text-gray-700 transition-colors cursor-pointer">
                 andy cui
@@ -177,6 +177,15 @@ function Home() {
           </header>
         </div>
       </div>
+
+      <div className="flex justify-center" style={{ marginTop: '5px', marginBottom: '60px' }}>
+              <img 
+                src="/uploads/tiger.png" 
+                alt="princeton tiger" 
+                className="max-w-xs scale-70"
+                style={{ transform: 'scale(0.7)' }}
+              />
+            </div>
 
 
     <p className="text-center text-gray-600"> my favorite memories </p>

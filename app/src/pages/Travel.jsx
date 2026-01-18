@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import TravelMap from '../components/TravelMap'
 import TravelCardGrid from '../components/TravelCardGrid'
 import PlacePopup from '../components/PlacePopup'
-import './Travel.css'
 
 function Travel() {
   const [selectedPlace, setSelectedPlace] = useState(null)
@@ -20,18 +18,10 @@ function Travel() {
             <h1 className="text-5xl font-bold text-gray-900 mb-4">
               travel
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-gray-600">
               around the world
             </p>
           </header>
-
-          {/* Map Section */}
-          <section className="mb-8">
-            <TravelMap
-              selectedPlace={selectedPlace}
-              onPlaceSelect={handlePlaceSelect}
-            />
-          </section>
 
           {/* Selected Place Popup */}
           {selectedPlace && (
@@ -39,6 +29,17 @@ function Travel() {
               <PlacePopup place={selectedPlace} />
             </div>
           )}
+
+          {/* Worm GIF */}
+          <div className="flex justify-center">
+              <img 
+                src="/uploads/worm.gif" 
+                alt="coming soon" 
+                className="max-w-xs scale-60"
+                style={{ transform: 'scale(0.6)' }}
+              />
+            </div>
+            
 
           {/* Travel Cards Grid */}
           <section>
