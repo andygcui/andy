@@ -95,7 +95,7 @@ function Nav() {
           >
             <FaTiktok size={18} />
           </a>
-          <a
+          {/* <a
             href="https://www.youtube.com/@andycui"
             target="_blank"
             rel="noopener noreferrer"
@@ -103,7 +103,7 @@ function Nav() {
             aria-label="YouTube"
           >
             <FaYoutube size={18} />
-          </a>
+          </a> */}
           <a
             href="https://open.spotify.com/user/fgdbobbt7vmocnt73ukp0fqcr?si=5116222092fa473d"
             target="_blank"
@@ -113,7 +113,7 @@ function Nav() {
           >
             <FaSpotify size={18} />
           </a>
-          <a
+          {/* <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=andy.cui@princeton.edu"
             target="_blank"
             rel="noopener noreferrer"
@@ -121,7 +121,7 @@ function Nav() {
             aria-label="Gmail"
           >
             <FaRegEnvelope size={18} />
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>

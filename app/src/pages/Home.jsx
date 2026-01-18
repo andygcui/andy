@@ -235,17 +235,22 @@ function Home() {
       <div className={`container mx-auto px-4 py-16 ${showIntro ? 'opacity-0 pointer-events-none' : 'opacity-100'}`} style={{ transition: 'opacity 0.3s' }}>
         <div className="max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[60vh]">
           <header className="text-center">
-              <h1 className="text-[2.75rem] font-serif text-gray-1000 mb-4 hover:text-gray-700 transition-colors cursor-pointer font-mono">
-                {headingText}
-                {headingComplete && (
-                  <span 
-                    className="inline-block ml-1 animate-pulse"
-                    style={{ animation: 'blink 1s infinite' }}
-                  >
-                    |
-                  </span>
-                )}
-              </h1>
+              <div className="group relative inline-block">
+                <p className="absolute bottom-full left-0 mb-2 ml-4 text-sm text-gray-600 font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                  andy.cui <span className='text-orange-700'>[at]</span> princeton <span className='text-orange-700'>[dot]</span> edu
+                </p>
+                <h1 className="text-[2.75rem] font-serif text-gray-1000 mb-4 hover:text-gray-700 transition-colors cursor-pointer font-mono">
+                  {headingText}
+                  {headingComplete && (
+                    <span 
+                      className="inline-block ml-1 animate-pulse"
+                      style={{ animation: 'blink 1s infinite' }}
+                    >
+                      |
+                    </span>
+                  )}
+                </h1>
+              </div>
               {/* <p className="text-gray-600 font-mono">andy.cui@princeton.edu</p> */}
             {/* Category Links
             <div className="flex justify-center items-center gap-6 mb-8">
