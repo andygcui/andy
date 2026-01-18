@@ -19,16 +19,9 @@ function Travel() {
               travel
             </h1>
             <p className="text-gray-600">
-              around the world
+              favorite cities: cusco, peru // lucerne, switzerland // new york, usa // chengdu, china // paris, france // kyoto, japan // providenciales, turks and caicos 
             </p>
           </header>
-
-          {/* Selected Place Popup */}
-          {selectedPlace && (
-            <div className="mb-8 max-w-md mx-auto">
-              <PlacePopup place={selectedPlace} />
-            </div>
-          )}
 
           {/* Worm GIF */}
           <div className="flex justify-center">
@@ -36,18 +29,12 @@ function Travel() {
                 src="/uploads/worm.gif" 
                 alt="coming soon" 
                 className="max-w-xs scale-60"
-                style={{ transform: 'scale(0.6)' }}
+                style={{ transform: 'scale(0.6)', marginTop: '-100px' }}
               />
             </div>
-            
 
-          {/* Travel Cards Grid */}
-          <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              Recent Trips
-            </h2>
-            <TravelCardGrid onCardClick={handlePlaceSelect} />
-          </section>
+
+        
         </div>
       </div>
     </div>

@@ -39,26 +39,13 @@ function Home() {
   // }, [images])
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true)
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
+    // Automatically trigger animation on page load
+    // Small delay ensures smooth animation start
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 100)
 
-    if (gridRef.current) {
-      observer.observe(gridRef.current)
-    }
-
-    return () => {
-      if (gridRef.current) {
-        observer.unobserve(gridRef.current)
-      }
-    }
+    return () => clearTimeout(timer)
   }, [])
 
 
@@ -114,7 +101,7 @@ function Home() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <header className="text-center">
-            <Link to="/about">
+            <Link to="/edu">
               <h1 className="text-5xl font-bold text-gray-900 mb-6 hover:text-gray-700 transition-colors cursor-pointer">
                 andy cui
               </h1>
@@ -166,35 +153,32 @@ function Home() {
               >
                 <FaInstagram size={24} />
               </a>
-              <a
-                href="mailto:andy.cui@princeton.edu"
-                className="text-gray-700 hover:text-gray-900 transition-colors"
-                aria-label="Email"
-              >
-                <FaEnvelope size={24} />
-              </a>
             </div>
           </header>
         </div>
       </div>
 
+      <Link to="/edu">
       <div className="flex justify-center" style={{ marginTop: '5px', marginBottom: '60px' }}>
               <img 
                 src="/uploads/tiger.png" 
                 alt="princeton tiger" 
-                className="max-w-xs scale-70"
-                style={{ transform: 'scale(0.7)' }}
+                className="max-w-xs scale-80 transition-all duration-200"
+                style={{ transform: 'scale(0.8)' }}
+                onMouseEnter={(e) => e.target.style.filter = 'brightness(1.5)'}
+                onMouseLeave={(e) => e.target.style.filter = 'brightness(1)'}
               />
             </div>
+            </Link>
 
-
-    <p className="text-center text-gray-600"> my favorite memories </p>
+    <p className="text-center text-gray-600" style={{ marginTop: '100px' }}> my favorite memories </p>
       {/* Portfolio Grid Section */}
       <div 
         ref={gridRef}
-        className={`container mx-auto px-4 py-16 transition-all duration-1000 ${
+        className={`container mx-auto px-4 pb-16 pt-4 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
+        style={{ marginTop: '5px' }}
       >
         <div className="max-w-6xl mx-auto">
           {/* Note: Images are loaded from public/uploads folder */}

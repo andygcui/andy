@@ -15,12 +15,12 @@ function Nav() {
           home
         </Link>
         <Link
-          to="/about"
+          to="/edu"
           className={`text-sm font-medium ${
-            location.pathname === '/about' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+            location.pathname === '/edu' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
           }`}
         >
-          about
+          edu
         </Link>
         <Link
           to="/travel"
