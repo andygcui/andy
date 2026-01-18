@@ -21,7 +21,7 @@ function Nav() {
             className="flex items-center"
           >
             <img 
-              src="/uploads/tiger.png" 
+              src="/uploads/header.png" 
               alt="home" 
               className="h-8 w-auto cursor-pointer"
               style={{ 
