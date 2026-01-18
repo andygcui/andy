@@ -7,11 +7,15 @@ function About() {
             <h1 className="text-5xl font-bold text-gray-900 mb-4">
               about
             </h1>
-            <p>
-                coming soon!
+            <p className="text-gray-600">
+              i am a financial engineering student at princeton who enjoys studying algorithms, statistics & probability; web & app development; and doing transformer-based AI research.
+              <br />
+              <br />
+              more to come soon!
             </p>
+          
             {/* Worm GIF */}
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center">
               <img 
                 src="/uploads/worm.gif" 
                 alt="coming soon" 

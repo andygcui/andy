@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { portfolioImages as staticImages } from '../data/portfolioImages'
 import { FaGithub, FaTiktok, FaYoutube, FaSpotify, FaEnvelope, FaInstagram } from 'react-icons/fa'
 
@@ -113,12 +114,11 @@ function Home() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <header className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">
-              andy cui
-            </h1>
-            <p className="text-xl text-gray-600 mb-6">
-              student; 
-            </p>
+            <Link to="/about">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6 hover:text-gray-700 transition-colors cursor-pointer">
+                andy cui
+              </h1>
+            </Link>
             {/* Social Links */}
             <div className="flex justify-center items-center gap-6">
               <a
@@ -178,6 +178,8 @@ function Home() {
         </div>
       </div>
 
+
+    <p className="text-center text-gray-600"> my favorite memories </p>
       {/* Portfolio Grid Section */}
       <div 
         ref={gridRef}
