@@ -8,6 +8,8 @@ function Home() {
   const [tigerVisible, setTigerVisible] = useState(false)
   const [captionText, setCaptionText] = useState('')
   const [captionComplete, setCaptionComplete] = useState(false)
+  const [headingText, setHeadingText] = useState('')
+  const [headingComplete, setHeadingComplete] = useState(false)
   const audioRef = useRef(null)
 
   // Stamp impression animation sequence
@@ -29,7 +31,7 @@ function Home() {
 
     // Start label-maker typing animation after tiger appears
     const captionTimer = setTimeout(() => {
-      const text = 'andy cui'
+      const text = 'ac49'
       let currentIndex = 0
       typingInterval = setInterval(() => {
         if (currentIndex < text.length) {
@@ -92,6 +94,34 @@ function Home() {
     }
   }, [showIntro, paperSliding, tigerVisible, navigate])
 
+  // Typewriter effect for heading when intro is done
+  useEffect(() => {
+    if (showIntro) return
+
+    let typingInterval = null
+    const text = 'ac49'
+    let currentIndex = 0
+
+    // Start typing after a brief delay
+    const typingTimer = setTimeout(() => {
+      typingInterval = setInterval(() => {
+        if (currentIndex < text.length) {
+          setHeadingText(text.slice(0, currentIndex + 1))
+          currentIndex++
+        } else {
+          clearInterval(typingInterval)
+          setHeadingComplete(true)
+        }
+      }, 80) // Same typing speed as stamp animation
+    }, 100)
+
+    return () => {
+      clearTimeout(typingTimer)
+      if (typingInterval) {
+        clearInterval(typingInterval)
+      }
+    }
+  }, [showIntro])
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
@@ -191,10 +221,18 @@ function Home() {
       <div className={`container mx-auto px-4 py-16 ${showIntro ? 'opacity-0 pointer-events-none' : 'opacity-100'}`} style={{ transition: 'opacity 0.3s' }}>
         <div className="max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[60vh]">
           <header className="text-center">
-              <h1 className="text-[2.75rem] font-serif text-gray-1000 mb-4 hover:text-gray-700 transition-colors cursor-pointer">
-                ANDY CUI
+              <h1 className="text-[2.75rem] font-serif text-gray-1000 mb-4 hover:text-gray-700 transition-colors cursor-pointer font-mono">
+                {headingText}
+                {headingComplete && (
+                  <span 
+                    className="inline-block ml-1 animate-pulse"
+                    style={{ animation: 'blink 1s infinite' }}
+                  >
+                    |
+                  </span>
+                )}
               </h1>
-              <p className="text-gray-600 font-mono">andy.cui@princeton.edu</p>
+              {/* <p className="text-gray-600 font-mono">andy.cui@princeton.edu</p> */}
             {/* Category Links
             <div className="flex justify-center items-center gap-6 mb-8">
               <Link
