@@ -7,19 +7,17 @@ function Txt() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <header className="text-center mb-16">
-            <h1 className="text-[2.75rem] font-serif text-gray-900 mb-4">
+            <h1 className="text-[2rem] font-serif text-gray-900 mb-4">
               .txt
             </h1>
-            <Link to="/txt/jan2026">
-            <p className="text-gray-600">
-              january
+            
+            <p className="text-gray-600 hover:text-gray-900">
+            <Link to="/txt/jan2026"> january </Link>
+            <br />
+            <Link to="/txt/dec2025"> december </Link>
             </p>
-            </Link>
-            <Link to="/txt/dec2025">
-            <p className="text-gray-600">
-              december
-            </p>
-            </Link>
+        
+
           </header>
         </div>
       </div>

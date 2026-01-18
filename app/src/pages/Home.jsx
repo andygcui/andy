@@ -270,59 +270,29 @@ function Home() {
       <div className={`container mx-auto px-4 py-16 ${showIntro ? 'opacity-0 pointer-events-none' : 'opacity-100'}`} style={{ transition: 'opacity 0.3s' }}>
         <div className="max-w-4xl mx-auto">
           <header className="text-center">
-            <Link to="/edu">
               <h1 className="text-[2.75rem] font-serif text-gray-1000 mt-40 mb-4 hover:text-gray-700 transition-colors cursor-pointer">
                 ANDY CUI
               </h1>
-            </Link>
-            {/* Social Links */}
+            {/* Category Links */}
             <div className="flex justify-center items-center gap-6 mb-8">
-              <a
-                href="https://github.com/andygcui"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-1000 hover:text-gray-800 transition-colors"
-                aria-label="GitHub"
+              <Link
+                to="/edu"
+                className="text-gray-1000 hover:text-gray-800 transition-colors text-sm font-medium"
               >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://www.instagram.com/_andycui"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-1000 hover:text-gray-800 transition-colors"
-                aria-label="Instagram"
+                edu
+              </Link>
+              <Link
+                to="/txt"
+                className="text-gray-1000 hover:text-gray-800 transition-colors text-sm font-medium"
               >
-                <FaInstagram size={24} />
-              </a>
-              <a
-                href="https://www.tiktok.com/@andy_cui"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-1000 hover:text-gray-800 transition-colors"
-                aria-label="TikTok"
+                txt
+              </Link>
+              <Link
+                to="/etc"
+                className="text-gray-1000 hover:text-gray-800 transition-colors text-sm font-medium"
               >
-                <FaTiktok size={24} />
-              </a>
-              <a
-                href="https://www.youtube.com/@andycui"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-1000 hover:text-gray-800 transition-colors"
-                aria-label="YouTube"
-              >
-                <FaYoutube size={24} />
-              </a>
-              <a
-                href="https://open.spotify.com/user/fgdbobbt7vmocnt73ukp0fqcr?si=5116222092fa473d"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-1000 hover:text-gray-800 transition-colors"
-                aria-label="Spotify"
-              >
-                <FaSpotify size={24} />
-              </a>
-              
+                etc
+              </Link>
             </div>
           </header>
         </div>
@@ -332,18 +302,18 @@ function Home() {
         <>
           {/* Category Circles */}
           {/* To add images: Replace the inner div with: <img src="/path/to/image.jpg" alt="edu" className="w-full h-full object-cover" /> */}
-          <div className="flex justify-center items-center gap-8 mb-12">
+          {/* <div className="flex justify-center items-center gap-8 mb-12">
             <Link to="/edu" className="group">
-              <div className="w-24 h-24 rounded-full bg-gray-200 overflow-hidden transition-all duration-200 hover:scale-110 cursor-pointer">
-                {/* Placeholder for edu image - replace with img tag when ready */}
-                <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
-                  .edu
-                </div>
-              </div>
+              <img 
+                src="/uploads/backpack.png" 
+                alt="edu" 
+                className="transition-all duration-200 hover:scale-110 cursor-pointer"
+                style={{ width: '120px', height: '120px' }}
+              />
             </Link>
             <Link to="/txt" className="group">
               <div className="w-24 h-24 rounded-full bg-gray-200 overflow-hidden transition-all duration-200 hover:scale-110 cursor-pointer">
-                {/* Placeholder for txt image - replace with img tag when ready */}
+                
                 <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
                   .txt
                 </div>
@@ -351,15 +321,15 @@ function Home() {
             </Link>
             <Link to="/etc" className="group">
               <div className="w-24 h-24 rounded-full bg-gray-200 overflow-hidden transition-all duration-200 hover:scale-110 cursor-pointer">
-                {/* Placeholder for etc image - replace with img tag when ready */}
+                
                 <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
                   etc.
                 </div>
               </div>
             </Link>
-          </div>
+          </div> */}
 
-          <p className="text-center font-mono text-sm text-gray-600" style={{ marginTop: '40px' }}> a few of my favorite memories </p>
+          {/* <p className="text-center font-mono text-sm text-gray-600" style={{ marginTop: '40px' }}> a few of my favorite memories </p> */}
         </>
       )}
       {/* Portfolio Grid Section */}

@@ -23,7 +23,7 @@ function Jan2026() {
             <header className="text-center mb-16">
 
               <h1 className="text-gray-900 mb-4">
-                <br /><br />
+                <br />
                 january 2026
               </h1>
               <p className="text-gray-600 mb-2 italic">
@@ -46,21 +46,39 @@ function Jan2026() {
               </p>
               <p className="text-gray-600">who knows, daniel caesar <br />
               don't be dumb, a$ap rocky</p>
-              <br /><br /><br /> <br /><br />
-            </div>
-          </div>
+              
+              {/* <img
+              src="/uploads/backpack.png"
+              alt="backpack"
+              className="max-w-xs scale-40"
+              style={{width: '10%', height: '10%'}}>
+              </img> */}
 
-          <div className="flex justify-start"> 
-          <iframe 
-            width="300" 
-            height="220" 
+              <iframe 
+            width="80" 
+            height="80" 
             src="https://www.youtube.com/embed/Wzn4BLtE73o?start=124&autoplay=1" 
             title="is it a crime to be unsure" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen>
           </iframe>
+          
+              <br /><br /><br /> <br /><br />
+            </div>
           </div>
+{/* 
+          <div className="flex justify-start"> 
+          <iframe 
+            width="220" 
+            height="auto" 
+            src="https://www.youtube.com/embed/Wzn4BLtE73o?start=124&autoplay=1" 
+            title="is it a crime to be unsure" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen>
+          </iframe>
+          </div> */}
 
         </div>
 
