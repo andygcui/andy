@@ -92,8 +92,8 @@ function Etc() {
               className="max-w-xs scale-60"
               style={{ transform: 'scale(0.6)', marginTop: '-100px' }}
             />
+            <p className="text-gray-600 text-center ml-3 mt-10">soon</p>
           </div>
-          <p className="text-gray-600 text-center">soon</p>
         </div>
       </div>
 
