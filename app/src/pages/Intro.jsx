@@ -205,7 +205,6 @@ function Intro() {
             />
           </div>
           
-          {/* Label-maker caption or Navigation Links - positioned below tiger */}
           <div 
             className="text-sm font-mono tracking-wider text-gray-700 text-center"
             style={{
@@ -224,22 +223,11 @@ function Intro() {
                 }}
               >
                 <Link 
-                  to="/home" 
+                  to="/txt/jan26" 
                   className="text-gray-700 hover:text-gray-900 transition-colors"
                   style={{
                     opacity: isAnimatingOut ? 0 : (linkVisible[0] ? 1 : 0),
                     transform: isAnimatingOut ? 'translateY(-10px)' : (linkVisible[0] ? 'translateY(0)' : 'translateY(-10px)'),
-                    transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
-                  }}
-                >
-                  home
-                </Link>
-                <Link 
-                  to="/txt/jan26" 
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
-                  style={{
-                    opacity: isAnimatingOut ? 0 : (linkVisible[1] ? 1 : 0),
-                    transform: isAnimatingOut ? 'translateY(-10px)' : (linkVisible[1] ? 'translateY(0)' : 'translateY(-10px)'),
                     transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
                   }}
                 >
@@ -249,12 +237,23 @@ function Intro() {
                   to="/txt/2025" 
                   className="text-gray-700 hover:text-gray-900 transition-colors"
                   style={{
+                    opacity: isAnimatingOut ? 0 : (linkVisible[1] ? 1 : 0),
+                    transform: isAnimatingOut ? 'translateY(-10px)' : (linkVisible[1] ? 'translateY(0)' : 'translateY(-10px)'),
+                    transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                  }}
+                >
+                  2025 notes
+                </Link>
+                <Link 
+                  to="/home" 
+                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                  style={{
                     opacity: isAnimatingOut ? 0 : (linkVisible[2] ? 1 : 0),
                     transform: isAnimatingOut ? 'translateY(-10px)' : (linkVisible[2] ? 'translateY(0)' : 'translateY(-10px)'),
                     transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
                   }}
                 >
-                  2025 notes
+                  home
                 </Link>
               </div>
             ) : (
@@ -287,22 +286,11 @@ function Intro() {
                     }}
                   >
                     <Link 
-                      to="/home" 
+                      to="/txt/jan26" 
                       className="text-gray-700 hover:text-gray-900 transition-colors"
                       style={{
                         opacity: isHoverAnimatingOut ? 0 : (hoverLinkVisible[0] ? 1 : 0),
                         transform: isHoverAnimatingOut ? 'translateY(-10px)' : (hoverLinkVisible[0] ? 'translateY(0)' : 'translateY(-10px)'),
-                        transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
-                      }}
-                    >
-                      home
-                    </Link>
-                    <Link 
-                      to="/txt/jan26" 
-                      className="text-gray-700 hover:text-gray-900 transition-colors"
-                      style={{
-                        opacity: isHoverAnimatingOut ? 0 : (hoverLinkVisible[1] ? 1 : 0),
-                        transform: isHoverAnimatingOut ? 'translateY(-10px)' : (hoverLinkVisible[1] ? 'translateY(0)' : 'translateY(-10px)'),
                         transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
                       }}
                     >
@@ -312,12 +300,23 @@ function Intro() {
                       to="/txt/2025" 
                       className="text-gray-700 hover:text-gray-900 transition-colors"
                       style={{
+                        opacity: isHoverAnimatingOut ? 0 : (hoverLinkVisible[1] ? 1 : 0),
+                        transform: isHoverAnimatingOut ? 'translateY(-10px)' : (hoverLinkVisible[1] ? 'translateY(0)' : 'translateY(-10px)'),
+                        transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                      }}
+                    >
+                      2025 notes
+                    </Link>
+                    <Link 
+                      to="/home" 
+                      className="text-gray-700 hover:text-gray-900 transition-colors"
+                      style={{
                         opacity: isHoverAnimatingOut ? 0 : (hoverLinkVisible[2] ? 1 : 0),
                         transform: isHoverAnimatingOut ? 'translateY(-10px)' : (hoverLinkVisible[2] ? 'translateY(0)' : 'translateY(-10px)'),
                         transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
                       }}
                     >
-                      2025 notes
+                      home
                     </Link>
                   </div>
                 ) : (
