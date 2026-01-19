@@ -46,7 +46,8 @@ function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
+    <>
+    <div className="h-screen bg-white relative overflow-hidden flex flex-col">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[60vh]">
           <header className="text-center">
@@ -91,7 +92,11 @@ function Home() {
           </header>
         </div>
       </div>
+      <div className="mt-auto text-center pb-8">
+        <p className="text-gray-600">:)</p>
+      </div>
     </div>
+    </>
   )
 }
 

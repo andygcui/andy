@@ -1,4 +1,4 @@
-function Dump2025() {
+function Notes2025() {
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
@@ -160,10 +160,20 @@ New head radical ? <br />
           <p className="text-gray-700 mb-4 mt-10"> amanaplanacanalpanama <br />
           </p>
 
+          <iframe 
+            width="80" 
+            height="80" 
+            src="https://www.youtube.com/embed/RKD8sVVTEAA?start=15&autoplay=1" 
+            title="self control" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen>
+          </iframe>
+
         </div>
       </div>
     </div>
   )
 }
 
-export default Dump2025
+export default Notes2025
