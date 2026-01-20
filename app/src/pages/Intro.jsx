@@ -14,7 +14,6 @@ function Intro() {
   const [isAnimatingOut, setIsAnimatingOut] = useState(false)
   const [isHoverAnimatingOut, setIsHoverAnimatingOut] = useState(false)
   const [tigerBright, setTigerBright] = useState(false)
-  const [isTigerHovered, setIsTigerHovered] = useState(false)
   const hoverTimeoutRef = useRef(null)
   const audioRef = useRef(null)
 
@@ -159,7 +158,6 @@ function Intro() {
             }}
             onMouseEnter={() => {
               if (tigerVisible && !paperSliding && !tigerClicked) {
-                setIsTigerHovered(true) // Brightness changes immediately
                 if (hoverTimeoutRef.current) {
                   clearTimeout(hoverTimeoutRef.current)
                   hoverTimeoutRef.current = null
@@ -173,7 +171,6 @@ function Intro() {
             }}
             onMouseLeave={() => {
               if (tigerVisible && !paperSliding && !tigerClicked) {
-                setIsTigerHovered(false) // Brightness changes immediately
                 hoverTimeoutRef.current = setTimeout(() => {
                   // Start reverse animation
                   setIsHoverAnimatingOut(true)
@@ -197,7 +194,7 @@ function Intro() {
                   ? 'scale(1) translate(0, 0)' 
                   : 'scale(1.05) translate(0, 0)',
                 opacity: tigerVisible ? 1 : 0,
-                filter: (isTigerHovered || tigerBright) ? 'contrast(1.1) brightness(1.5)' : 'contrast(1.1) brightness(0.95)',
+                filter: (isHovering || tigerBright) ? 'contrast(1.1) brightness(1.5)' : 'contrast(1.1) brightness(0.95)',
                 transition: tigerVisible 
                   ? 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease-out, filter 0.2s ease-in-out' 
                   : 'none',
@@ -268,7 +265,6 @@ function Intro() {
                       gap: '0.75rem'
                     }}
                     onMouseEnter={() => {
-                      setIsTigerHovered(true) // Keep brightness on when hovering links
                       if (hoverTimeoutRef.current) {
                         clearTimeout(hoverTimeoutRef.current)
                         hoverTimeoutRef.current = null
@@ -276,7 +272,6 @@ function Intro() {
                       setIsHovering(true)
                     }}
                     onMouseLeave={() => {
-                      setIsTigerHovered(false) // Brightness changes immediately
                       hoverTimeoutRef.current = setTimeout(() => {
                         // Start reverse animation
                         setIsHoverAnimatingOut(true)

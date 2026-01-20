@@ -36,7 +36,7 @@ function Dec2025() {
 
           <div className="flex justify-center">
             <p className="text-gray-600">squid games season 2 <br />
-            stranger things 1, 2 <br />
+            stranger things 1 and 2 <br />
             </p>
           </div>
 

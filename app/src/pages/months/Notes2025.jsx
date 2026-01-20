@@ -160,7 +160,7 @@ New head radical ? <br />
           <p className="text-gray-700 mb-4 mt-10"> amanaplanacanalpanama <br />
           </p>
 
-          {/* <iframe 
+          <iframe 
             width="80" 
             height="80" 
             src="https://www.youtube.com/embed/RKD8sVVTEAA?start=15&autoplay=1" 
@@ -168,7 +168,7 @@ New head radical ? <br />
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen>
-          </iframe> */}
+          </iframe>
 
         </div>
       </div>
