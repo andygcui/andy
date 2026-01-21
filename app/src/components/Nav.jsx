@@ -139,7 +139,7 @@ function Nav() {
               href="https://github.com/andygcui"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-1000 transition-colors"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="GitHub"
             >
               <FaGithub size={18} />
@@ -148,7 +148,7 @@ function Nav() {
               href="https://www.instagram.com/_andycui"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-1000 transition-colors"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="Instagram"
             >
               <FaInstagram size={18} />
@@ -157,7 +157,7 @@ function Nav() {
               href="https://www.tiktok.com/@andy_cui"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-1000 transition-colors"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="TikTok"
             >
               <FaTiktok size={18} />
