@@ -65,7 +65,7 @@ function Edu() {
                   GreenTrip
                   </a>
                   </h3>
-                <p className="text-sm text-gray-700">Full-stack sustainable AI travel agent optimizing for CO₂ emissions, cost, and sustainability</p>
+                <p className="text-sm text-gray-700">Full-stack sustainable AI travel agent optimizing for sustainability (CO₂ emissions), cost, and route efficiency</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2 hover:text-orange-700 transition-colors">
